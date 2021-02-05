@@ -45,7 +45,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   name                            = "${var.prefix}-vm"
   resource_group_name             = azurerm_resource_group.myterrarg.name
   location                        = azurerm_resource_group.myterrarg.location
-  size                            = "Standard_F2"
+  size                            = "Standard_DS1_v2"
   admin_username                  = "adminuser"
   network_interface_ids = [
     azurerm_network_interface.myterranic.id,
